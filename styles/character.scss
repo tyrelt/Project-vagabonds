@@ -1,17 +1,24 @@
 // styles for header section 
 .header { 
-    background: url(../images/FPOLandscape.png) no-repeat bottom center fixed; 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+    // background: url(../images/FPOLandscape.png) no-repeat bottom center fixed; 
+    // -webkit-background-size: cover;
+    // -moz-background-size: cover;
+    // -o-background-size: cover;
+    // background-size: cover;
     overflow: hidden;
-    height: 600px;
+    background-color: #2f4f4f;
+    height: 400px;
     h1 { 
         color: white; 
         text-align: center; 
         font-size: 8em;
-        margin-top: 1em;
+        margin: 1em 0 0 0;
+    }
+    h2 { 
+        color: #39FF14; 
+        text-align: center; 
+        font-size: 2em; 
+        font-family: 'Inconsolata', Monaco, monospace; 
     }
 }
 
@@ -30,9 +37,9 @@
     width: 83ch; // number of characters; limited support
     white-space: nowrap;
     overflow: hidden;
-    animation: typing 6s 5s steps(83, end), // one step = one character
+    animation: typing 6s steps(83, end), // one step = one character
                blink .5s step-end infinite alternate;
-    -webkit-animation: typing 6s 5s steps(83, end), 
+    -webkit-animation: typing 6s steps(83, end), 
                blink .5s step-end infinite alternate;
 }
 
