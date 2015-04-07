@@ -1,0 +1,106 @@
+// styles for header section 
+.header { 
+    background: url(../images/FPOLandscape.png) no-repeat bottom center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    overflow: hidden;
+    height: 600px;
+    h1 { 
+        color: white; 
+        text-align: center; 
+        font-size: 8em;
+        margin-top: 1em;
+    }
+}
+
+// styles for details section 
+
+.overview { 
+    margin: 0 auto;
+}
+
+// styles for live-typing effect
+.liveType { 
+    font-family: 'Inconsolata', Monaco, monospace; // Must choose a monospace font
+    margin: 3em auto; 
+    border-right: .1em solid;
+    width: 500px; // fallback 
+    width: 83ch; // number of characters; limited support
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 6s 5s steps(83, end), // one step = one character
+               blink .5s step-end infinite alternate;
+    -webkit-animation: typing 6s 5s steps(83, end), 
+               blink .5s step-end infinite alternate;
+}
+
+//live-type keyframes
+@keyframes typing { from { width: 0; } } 
+@-webkit-keyframes typing {from { width: 0; } }
+@-moz-keyframes typing {from { width: 0; } }
+
+@keyframes blink { 50% { border-color: transparent; } }
+@-webkit-keyframes blink { 50% { border-color: transparent; } }
+@-moz-keyframes blink { 50% { border-color: transparent; } }
+
+
+// styles for profile spinner
+.spinnerContainer { 
+    position: relative;
+    margin: 0 auto; 
+    width: 500px; 
+}
+
+.central {
+    height: 150px; 
+    width: 150px;
+    border-radius: 50%;
+    position: absolute;
+    top: 15px;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    margin: 0 auto; 
+}
+
+.innerRing {
+    height: 160px;
+    width: 160px;
+    border-radius: 50%;
+    position: absolute;
+    top: 10px;
+    left: 0;
+    right: 0;
+    z-index: -2;
+    margin: 0 auto;
+    animation: clockSpin 4s linear infinite;
+    -webkit-animation: clockSpin 4s linear infinite;
+    -moz-animation: clockSpin 4s linear infinite;
+}
+
+.outerRing {
+    height: 180px;
+    width: 180px;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: -3; 
+    margin: 0 auto;
+    animation: counterSpin 10s linear infinite;
+    -webkit-animation: counterSpin 10s linear infinite;
+    -moz-animation: counterSpin 10s linear infinite;
+}
+
+//profile-spinner keyframes
+@-moz-keyframes clockSpin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes clockSpin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes clockSpin { 100% { -webkit-transform: rotate(360deg); transform: rotate(360deg); } }
+
+@-moz-keyframes counterSpin { 100% { -moz-transform: rotate(-360deg); } }
+@-webkit-keyframes spin2 { 100% { -webkit-transform: rotate(-360deg); } }
+@keyframes spin2 { 100% { -webkit-transform: rotate(-360deg); transform: rotate(360deg); } }
+

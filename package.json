@@ -1,0 +1,21 @@
+{
+  "name": "gruntConfig",
+  "version": "0.1.0",
+  "author": "Tyrel Tjoelker",
+  "private": true,
+  "devDependencies": {
+    "grunt": "*",
+    "grunt-contrib-cssmin": "*",
+    "grunt-contrib-sass": "*",
+    "grunt-contrib-uglify": "*",
+    "grunt-contrib-watch": "*",
+    "grunt-cssc": "*",
+    "grunt-express": "*",
+    "matchdep": "*",
+    "grunt-open": "*"
+  },
+  "dependencies": {
+    "grunt-browserify": "*",
+    "browserify": "^8.1.1"
+  }
+}
